@@ -143,8 +143,8 @@ Dias sem faturamento (valor igual a 0) são ignorados no cálculo da média
 Os dados de faturamento foram simulados diretamente no código, conforme permitido
 
 Arquivo
+[Ver solução da Questão 3](https://github.com/eduardoapech/desafio-tecnico-target/blob/main/lib/questao3/q3.dart)
 
-questao_3/q3.dart
 
 Execução:
 
@@ -162,29 +162,18 @@ Por fim, é feita a contagem dos dias cujo faturamento foi superior à média ca
 ## Questão 4
 
 
-Uma empresa solicitou o desenvolvimento de um aplicativo para manutenção de um cadastro de clientes, com os seguintes requisitos:
-
-Um cliente pode possuir um número ilimitado de telefones
-
-Cada telefone possui um tipo (comercial, residencial, celular, etc.), sendo possível cadastrar novos tipos
-
-Para cada cliente, é necessário armazenar apenas o estado brasileiro em que se encontra, permitindo também o cadastro de novos estados
-
-O objetivo é definir a estrutura do banco de dados que atenda a esses requisitos.
-
-Modelo Lógico Proposto
-
-O modelo lógico foi estruturado em quatro tabelas, seguindo boas práticas de normalização.
-
-Tabela: estado
+🗄️ Estrutura das Tabelas
+📌 Tabela: estado
 Campo	Tipo	Descrição
 id_estado	INT	Identificador único do estado
 sigla	CHAR(2)	Sigla do estado (ex: SP, RJ)
 nome	VARCHAR	Nome completo do estado
 
-PK: id_estado
+Chave Primária (PK): id_estado
 
-Tabela: cliente
+---
+
+📌 Tabela: cliente
 Campo	Tipo	Descrição
 id_cliente	INT	Identificador único do cliente
 razao_social	VARCHAR	Nome ou razão social
@@ -193,14 +182,18 @@ estado_id	INT	Estado do cliente
 PK: id_cliente
 FK: estado_id → estado.id_estado
 
-Tabela: tipo_telefone
+---
+
+📌 Tabela: tipo_telefone
 Campo	Tipo	Descrição
 id_tipo	INT	Identificador do tipo
 descricao	VARCHAR	Tipo do telefone
 
 PK: id_tipo
 
-Tabela: telefone
+---
+
+📌 Tabela: telefone
 Campo	Tipo	Descrição
 id_telefone	INT	Identificador do telefone
 numero	VARCHAR	Número do telefone
@@ -208,10 +201,15 @@ cliente_id	INT	Cliente associado
 tipo_telefone_id	INT	Tipo do telefone
 
 PK: id_telefone
-FK: cliente_id → cliente.id_cliente
-FK: tipo_telefone_id → tipo_telefone.id_tipo
+FK:
 
-Relacionamentos
+cliente_id → cliente.id_cliente
+
+tipo_telefone_id → tipo_telefone.id_tipo
+
+---
+
+🔗 Relacionamentos
 
 Um estado pode possuir vários clientes
 
@@ -219,16 +217,21 @@ Um cliente pode possuir vários telefones
 
 Um tipo de telefone pode ser utilizado por vários telefones
 
-Consulta SQL – Clientes do Estado de São Paulo
-SELECT
+---
+
+🔍 Consulta SQL – Clientes do Estado de São Paulo
+SELECT 
   c.id_cliente,
   c.razao_social,
   t.numero AS telefone
 FROM cliente c
-INNER JOIN estado e ON c.estado_id = e.id_estado
-INNER JOIN telefone t ON t.cliente_id = c.id_cliente
+INNER JOIN estado e 
+  ON c.estado_id = e.id_estado
+INNER JOIN telefone t 
+  ON t.cliente_id = c.id_cliente
 WHERE e.sigla = 'SP';
 
+---
 
 
 ## Questão 5
@@ -240,7 +243,7 @@ Devido ao tempo adicional gasto pelo carro nos pedágios, o caminhão percorre u
 
 Arquivo:
 
-questao_5/q5.dart
+[questao_5/q5.dart](https://github.com/eduardoapech/desafio-tecnico-target/blob/main/lib/questao5/q5.dart)
 
 
 
