@@ -1,25 +1,53 @@
 void main() {
-  const double distanciaTotal = 125;
-  const double velocidadeCarro = 90;
-  const double velocidadeCaminhao = 80;
+  // Dados do problema
+  double distanciaTotal = 125.0; // km
+  double velocidadeCarro = 90.0; // km/h
+  double velocidadeCaminhao = 80.0; // km/h
 
-  const int pedagios = 3;
-  const double atrasoPorPedagio = 5 / 60; // horas
+  int qtdPedagios = 3;
+  double atrasoPorPedagioMin = 5.0; // minutos
 
-  double atrasoTotalCarro = pedagios * atrasoPorPedagio;
+  // 1️⃣ Converter atraso total para horas
+  double atrasoTotalHoras =
+      (qtdPedagios * atrasoPorPedagioMin) / 60;
 
-  double tempoEncontro = distanciaTotal / (velocidadeCarro + velocidadeCaminhao);
+  // 2️⃣ Distância que o caminhão percorre enquanto o carro está parado
+  double distanciaCaminhaoDuranteAtraso =
+      velocidadeCaminhao * atrasoTotalHoras;
 
-  double distanciaCarro =
-      velocidadeCarro * (tempoEncontro - atrasoTotalCarro);
+  // 3️⃣ Nova distância entre os veículos
+  double distanciaRestante =
+      distanciaTotal - distanciaCaminhaoDuranteAtraso;
 
-  double distanciaCaminhao =
-      velocidadeCaminhao * tempoEncontro;
+  // 4️⃣ Velocidade relativa
+  double velocidadeRelativa =
+      velocidadeCarro + velocidadeCaminhao;
 
-  double distanciaAteRibeirao =
-      distanciaTotal - distanciaCaminhao;
+  // 5️⃣ Tempo até o encontro após o atraso
+  double tempoAteEncontro =
+      distanciaRestante / velocidadeRelativa;
 
-  print("Distância do carro: ${distanciaCarro.toStringAsFixed(2)} km");
-  print("Distância do caminhão até Ribeirão Preto: ${distanciaAteRibeirao.toStringAsFixed(2)} km");
-  print("Conclusão: O caminhão estará mais próximo de Ribeirão Preto.");
+  // 6️⃣ Distância do carro até Ribeirão Preto
+  double distanciaCarroRibeirao =
+      velocidadeCarro * tempoAteEncontro;
+
+  // 7️⃣ Distância do caminhão até Ribeirão Preto
+  double tempoTotalCaminhao =
+      atrasoTotalHoras + tempoAteEncontro;
+
+  double distanciaCaminhaoRibeirao =
+      velocidadeCaminhao * tempoTotalCaminhao;
+
+  // Resultados
+  print("Distância do carro até Ribeirão Preto: "
+      "${distanciaCarroRibeirao.toStringAsFixed(2)} km");
+
+  print("Distância do caminhão até Ribeirão Preto: "
+      "${distanciaCaminhaoRibeirao.toStringAsFixed(2)} km");
+
+  if (distanciaCarroRibeirao < distanciaCaminhaoRibeirao) {
+    print("➡ O carro está mais próximo de Ribeirão Preto.");
+  } else {
+    print("➡ O caminhão está mais próximo de Ribeirão Preto.");
+  }
 }
