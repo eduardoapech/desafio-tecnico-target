@@ -1,17 +1,5 @@
 /*
-  Questão 4 – Banco de Dados
-
-  Enunciado:
-  Uma empresa solicitou o desenvolvimento de um aplicativo para manutenção
-  de um cadastro de clientes, com os seguintes requisitos:
-
-  - Um cliente pode possuir um número ilimitado de telefones;
-  - Cada telefone possui um tipo (comercial, residencial, celular, etc.),
-    sendo possível cadastrar novos tipos;
-  - É necessário armazenar apenas o estado brasileiro do cliente,
-    permitindo o cadastro de novos estados.
-
-============================================================
+  Questão 4
 
 
   MODELO LÓGICO PROPOSTO
@@ -36,7 +24,6 @@
   - id_cliente (FK → CLIENTE.id_cliente)
   - id_tipo_telefone (FK → TIPO_TELEFONE.id_tipo_telefone)
   
-============================================================
 
   RELACIONAMENTOS
 
@@ -44,7 +31,6 @@
   - CLIENTE (1) → (N) TELEFONE
   - TIPO_TELEFONE (1) → (N) TELEFONE
 
-============================================================
   CONSULTA SQL – CLIENTES DO ESTADO DE SÃO PAULO
 
   SELECT 

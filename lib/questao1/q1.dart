@@ -3,7 +3,6 @@ void main() {
   int soma = 0;
   int k = 1;
 
-  // Loop executa enquanto K for menor que INDICE
   while (k < indice) {
     k++;
     soma += k;
