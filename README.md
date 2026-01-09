@@ -1,4 +1,4 @@
-Questão 1
+## Questão 1
 
 int INDICE = 12, SOMA = 0, K = 1;
 
@@ -45,7 +45,7 @@ Valor final da variável SOMA:
 
 
 
-Questão 2
+## Questão 2
 a)
 
 Sequência:
@@ -124,7 +124,7 @@ Portanto, o próximo número é 200.
 
 
 
-Questão 3
+## Questão 3
 
 Foi implementado um algoritmo eficiente, com complexidade O(n), que calcula:
 
@@ -159,7 +159,7 @@ Por fim, é feita a contagem dos dias cujo faturamento foi superior à média ca
 
 
 
-Questão 4
+## Questão 4
 
 
 Uma empresa solicitou o desenvolvimento de um aplicativo para manutenção de um cadastro de clientes, com os seguintes requisitos:
@@ -231,7 +231,7 @@ WHERE e.sigla = 'SP';
 
 
 
-Questão 5
+## Questão 5
 
 O problema envolve dois veículos partindo de cidades opostas, com velocidades diferentes e tempo adicional causado por pedágios.
 
