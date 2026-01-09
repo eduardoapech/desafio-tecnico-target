@@ -238,10 +238,49 @@ WHERE e.sigla = 'SP';
 
 ## Questão 5
 
-O problema envolve dois veículos partindo de cidades opostas, com velocidades diferentes e tempo adicional causado por pedágios.
+Dados do problema
 
-No momento do cruzamento, ambos os veículos estão no mesmo ponto da rodovia.
-Devido ao tempo adicional gasto pelo carro nos pedágios, o caminhão percorre uma distância maior antes do encontro, fazendo com que o ponto de cruzamento fique mais próximo da cidade de Ribeirão Preto.
+Distância entre Ribeirão Preto ↔ Barretos: 125 km
+
+Carro:
+
+Sai de Ribeirão Preto → Barretos
+
+Velocidade: 90 km/h
+
+Passa por 3 pedágios
+
+Atraso: 5 minutos em cada pedágio
+
+Caminhão:
+
+Sai de Barretos → Ribeirão Preto
+
+Velocidade: 80 km/h
+
+Sem atrasos
+
+
+
+👉 O carro está 55,6 km distante de Ribeirão Preto
+
+
+🚚 Caminhão
+
+
+👉 O caminhão está 69,4 km distante de Ribeirão Preto
+
+✅ Conclusão
+
+📍 Quando os veículos se cruzam, o carro está mais próximo da cidade de Ribeirão Preto.
+
+Resumo:
+
+Carro → 55,6 km de Ribeirão Preto
+
+Caminhão → 69,4 km de Ribeirão Preto
+
+✔️ Resposta correta: o carro está mais próximo de Ribeirão Preto.
 
 Arquivo:
 
