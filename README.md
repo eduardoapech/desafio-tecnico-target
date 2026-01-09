@@ -162,8 +162,8 @@ Por fim, é feita a contagem dos dias cujo faturamento foi superior à média ca
 ## Questão 4
 
 
-🗄️ Estrutura das Tabelas
-📌 Tabela: estado
+ Estrutura das Tabelas
+ Tabela: estado
 Campo	Tipo	Descrição
 id_estado	INT	Identificador único do estado
 sigla	CHAR(2)	Sigla do estado (ex: SP, RJ)
@@ -173,7 +173,7 @@ Chave Primária (PK): id_estado
 
 ---
 
-📌 Tabela: cliente
+ Tabela: cliente
 Campo	Tipo	Descrição
 id_cliente	INT	Identificador único do cliente
 razao_social	VARCHAR	Nome ou razão social
@@ -184,7 +184,7 @@ FK: estado_id → estado.id_estado
 
 ---
 
-📌 Tabela: tipo_telefone
+ Tabela: tipo_telefone
 Campo	Tipo	Descrição
 id_tipo	INT	Identificador do tipo
 descricao	VARCHAR	Tipo do telefone
@@ -193,7 +193,7 @@ PK: id_tipo
 
 ---
 
-📌 Tabela: telefone
+ Tabela: telefone
 Campo	Tipo	Descrição
 id_telefone	INT	Identificador do telefone
 numero	VARCHAR	Número do telefone
@@ -209,7 +209,7 @@ tipo_telefone_id → tipo_telefone.id_tipo
 
 ---
 
-🔗 Relacionamentos
+ Relacionamentos
 
 Um estado pode possuir vários clientes
 
@@ -219,7 +219,7 @@ Um tipo de telefone pode ser utilizado por vários telefones
 
 ---
 
-🔍 Consulta SQL – Clientes do Estado de São Paulo
+ Consulta SQL – Clientes do Estado de São Paulo
 SELECT 
   c.id_cliente,
   c.razao_social,
@@ -262,17 +262,17 @@ Sem atrasos
 
 
 
-👉 O carro está 55,6 km distante de Ribeirão Preto
+ O carro está 55,6 km distante de Ribeirão Preto
 
 
-🚚 Caminhão
+ Caminhão
 
 
-👉 O caminhão está 69,4 km distante de Ribeirão Preto
+ O caminhão está 69,4 km distante de Ribeirão Preto
 
-✅ Conclusão
+ Conclusão
 
-📍 Quando os veículos se cruzam, o carro está mais próximo da cidade de Ribeirão Preto.
+ Quando os veículos se cruzam, o carro está mais próximo da cidade de Ribeirão Preto.
 
 Resumo:
 
@@ -280,7 +280,7 @@ Carro → 55,6 km de Ribeirão Preto
 
 Caminhão → 69,4 km de Ribeirão Preto
 
-✔️ Resposta correta: o carro está mais próximo de Ribeirão Preto.
+ Resposta correta: o carro está mais próximo de Ribeirão Preto.
 
 Arquivo:
 
