@@ -7,31 +7,31 @@ void main() {
   int qtdPedagios = 3;
   double atrasoPorPedagioMin = 5.0; // minutos
 
-  // 1️⃣ Converter atraso total para horas
+  // Converter atraso total para horas
   double atrasoTotalHoras =
       (qtdPedagios * atrasoPorPedagioMin) / 60;
 
-  // 2️⃣ Distância que o caminhão percorre enquanto o carro está parado
+  // Distância que o caminhão percorre enquanto o carro está parado
   double distanciaCaminhaoDuranteAtraso =
       velocidadeCaminhao * atrasoTotalHoras;
 
-  // 3️⃣ Nova distância entre os veículos
+  // Nova distância entre os veículos
   double distanciaRestante =
       distanciaTotal - distanciaCaminhaoDuranteAtraso;
 
-  // 4️⃣ Velocidade relativa
+  // Velocidade relativa
   double velocidadeRelativa =
       velocidadeCarro + velocidadeCaminhao;
 
-  // 5️⃣ Tempo até o encontro após o atraso
+  // Tempo até o encontro após o atraso
   double tempoAteEncontro =
       distanciaRestante / velocidadeRelativa;
 
-  // 6️⃣ Distância do carro até Ribeirão Preto
+  // Distância do carro até Ribeirão Preto
   double distanciaCarroRibeirao =
       velocidadeCarro * tempoAteEncontro;
 
-  // 7️⃣ Distância do caminhão até Ribeirão Preto
+  // Distância do caminhão até Ribeirão Preto
   double tempoTotalCaminhao =
       atrasoTotalHoras + tempoAteEncontro;
 
