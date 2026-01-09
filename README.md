@@ -233,6 +233,8 @@ WHERE e.sigla = 'SP';
 
 ---
 
+[questao 4](https://github.com/eduardoapech/desafio-tecnico-target/blob/main/lib/questao4/q4.dart)
+
 
 ## Questão 5
 
@@ -243,7 +245,7 @@ Devido ao tempo adicional gasto pelo carro nos pedágios, o caminhão percorre u
 
 Arquivo:
 
-[questao_5/q5.dart](https://github.com/eduardoapech/desafio-tecnico-target/blob/main/lib/questao5/q5.dart)
+[questao 5](https://github.com/eduardoapech/desafio-tecnico-target/blob/main/lib/questao5/q5.dart)
 
 
 
